@@ -1,7 +1,7 @@
 # Overview
 
-This repository is for the development of code for CO-OPS data tools by the CODE group. 
-DISCLAIMER: This code is under development and is not encouraged for public use. Code for public use is available in CO-OPS_Data_Tools_for_Matlab and CO-OPS_Data_Tools_for_Python repositories. 
+This repository is for the development of MATLAB code for CO-OPS data tools by the CODE group. 
+DISCLAIMER: This code is under development and is not encouraged for public use. Code for public use is available in the CO-OPS_Data_Tools_for_Matlab repository. 
 
 For additional information, contact:
 Lindsay Abrams,
