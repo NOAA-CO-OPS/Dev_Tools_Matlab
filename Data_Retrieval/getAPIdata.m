@@ -27,11 +27,11 @@ function Output = getAPIdata(StationID,BeginDate,EndDate,...
 %of the United States.
 %
 % LL 5/2/2016
-% LRA modified 5/18/2020
+% LRA 5/18/2020 - added pause(), updated description, added license
 %
 % Required Inputs:
 % StationID > The station ID of the water level, met, or current station
-%             of interst.  String. eg - '8452660'
+%             of interest.  String. eg - '8452660'
 % BeginDate > The beginning date of the data request.  Only month day and
 %             year input.  The hours and minutes will be assumed to be
 %             00:00 on the day.  The format should be yyyymmdd.  eg -
