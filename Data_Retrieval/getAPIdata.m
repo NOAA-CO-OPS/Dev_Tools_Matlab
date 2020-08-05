@@ -26,8 +26,9 @@ function Output = getAPIdata(StationID,BeginDate,EndDate,...
 %license to use,copy, and create derivative works of the Software outside 
 %of the United States.
 %
-% LL 5/2/2016
-% LRA 5/18/2020 - added pause(), updated description, added license
+% 2016/05/02 - LL
+% 2020/05/18 - LA - added pause(), updated description, added license
+% 2020/08/05 - API endpoint updated
 %
 % Required Inputs:
 % StationID > The station ID of the water level, met, or current station
@@ -252,7 +253,7 @@ all_data = [];
 disp(['Submitting ' num2str(length(DatesE)) ' requests.']);
 for i=1:length(DatesB)
     % build url request
-    url_request = ['https://tidesandcurrents.noaa.gov/api/datagetter?'...
+    url_request = ['https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?'...
         'begin_date=' datestr(DatesB(i),'yyyymmdd') ' 00:00' ...
         '&end_date='  datestr(DatesE(i),'yyyymmdd') ' 23:59'...
         '&station='   StationID ...
