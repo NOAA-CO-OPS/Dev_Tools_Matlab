@@ -483,6 +483,31 @@ switch lower(Product)
             end %switch
         end % j 
         end
+   
+    case 'water_temperature'
+        format = '%s%f%f%f%f%[^\n\r]';
+        if ~isempty(all_data)
+        	data = textscan(all_data, format,'Delimiter',',',...
+            	       'EmptyValue',NaN,'HeaderLines',0,'ReturnOnError',false);
+	else
+	    data_flag=1;
+	end
+        fnames = {'DateTime','WaterTemperature','X','N','R'};
+        for j = 1:length(fnames)
+            Output.(fnames{j}) = [];
+        end
+        if ~data_flag
+        for j = 1:length(fnames)
+            switch fnames{j}
+                case 'DateTime'
+                    t = datenum(data{:,j},'yyyy-mm-dd HH:MM');
+                    Output.(fnames{j}) = cat(1,Output.(fnames{j}),t);
+                case {'WaterTemperature','X','N','R'}
+                    Output.(fnames{j}) = cat(1,Output.(fnames{j}),...
+                        data{:,j});
+            end %switch
+        end % j 
+        end    
 
     case 'visibility'
         format = '%s%f%[^\n\r]';
